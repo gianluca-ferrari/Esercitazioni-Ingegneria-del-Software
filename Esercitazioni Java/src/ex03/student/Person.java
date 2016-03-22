@@ -31,7 +31,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", birthday=" + birthday + "]";
+		return name + ", nato il " + birthday.get(Calendar.DAY_OF_MONTH) + "/" + birthday.get(Calendar.MONTH) + "/" + birthday.get(Calendar.YEAR);
 	}
 	
 	

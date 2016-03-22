@@ -8,6 +8,8 @@ public class Person {
 	
 	//Constructor
 	Person(String name, Calendar birthday){
+		if(name==null || birthday==null)
+			throw new IllegalArgumentException("Person: parameters cannot be null!");
 		this.name=name;
 		this.birthday=birthday;
 	}

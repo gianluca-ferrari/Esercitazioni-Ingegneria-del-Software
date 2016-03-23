@@ -3,7 +3,7 @@ package ex02.morracinese;
 import java.util.Random;
 
 public enum Choice {
-	CARTA, FORBICE, SASSO;
+	CARTA, FORBICI, SASSO;
 	
 	//converte una stringa di testo nella scelta corrispondente
 	public static Choice parseInput(String input){
@@ -25,10 +25,10 @@ public enum Choice {
 		switch(this){
 		case CARTA:
 			return winOutcomeIfIsTrueThat(other==Choice.SASSO);		
-		case FORBICE:
+		case FORBICI:
 			return winOutcomeIfIsTrueThat(other==Choice.CARTA);
 		case SASSO:
-			return winOutcomeIfIsTrueThat(other==Choice.FORBICE);
+			return winOutcomeIfIsTrueThat(other==Choice.FORBICI);
 		default:
 			return null;
 		}

@@ -8,7 +8,13 @@ public class GameLogic {
 	public void round(){
 		System.out.println("Fai la tua scelta: CARTA, SASSO o FORBICI?");
 		String input = scanner.next();
-		Choice playerChoice = Choice.parseInput(input);
+		Choice playerChoice;
+		try {
+			playerChoice = Choice.parseInput(input);
+		} catch (IllegalArgumentException e) {
+			System.out.println("Scelta non valida!");
+			return;
+		}
 		System.out.println("Hai scelto " + playerChoice);
 		Choice computerChoice = Choice.getRandomChoice();
 		System.out.println("Il computer ha scelto " + computerChoice);

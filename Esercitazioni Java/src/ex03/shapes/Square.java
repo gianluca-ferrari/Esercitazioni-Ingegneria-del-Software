@@ -36,6 +36,7 @@ public class Square extends Shape{
 		points.add( (new Point(lowerLeftPoint.getX(), lowerLeftPoint.getY()+sideLength)).rotate(lowerLeftPoint, orientation) );//upper left
 		points.add( (new Point(lowerLeftPoint.getX()+sideLength, lowerLeftPoint.getY()+sideLength)).rotate(lowerLeftPoint, orientation) );//upper right
 		points.add( (new Point(lowerLeftPoint.getX()+sideLength, lowerLeftPoint.getY())).rotate(lowerLeftPoint, orientation) );//lower right
-		return points;
+		points.add(lowerLeftPoint);//lower left: for closing the shape
+		return points;		
 	}
 }

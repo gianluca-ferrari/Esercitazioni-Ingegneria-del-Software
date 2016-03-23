@@ -27,7 +27,7 @@ public class Point {
 		
 		double rotatedX,rotatedY;
 		rotatedX = center.x + (this.x - center.x)*Math.cos(degrees) - (this.y - center.y)*Math.sin(degrees);
-		rotatedY = center.y + (this.x - center.x)*Math.sin(degrees) + (this.y - center.y)*Math.sin(degrees);
+		rotatedY = center.y + (this.x - center.x)*Math.sin(degrees) + (this.y - center.y)*Math.cos(degrees);
 		
 		return new Point(rotatedX, rotatedY);
 	}

@@ -1,4 +1,4 @@
-##Esercizi di laboratorio Ingegneria del Software
+##Esercitazioni di Ingegneria del Software
 
 Gianluca Ferrari
 
